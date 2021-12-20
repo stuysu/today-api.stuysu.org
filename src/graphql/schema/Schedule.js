@@ -1,9 +1,8 @@
 import {gql} from "apollo-server-express";
 
 export default gql`
-	type Query {
-		ping: String!
-
-		today: Day
+	type Schedule {
+		schedule: String!
+		name: String!
 	}
 `;

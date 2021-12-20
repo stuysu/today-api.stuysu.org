@@ -4,7 +4,8 @@
 	"description": "API for today.stuysu.org",
 	"main": "src/index.js",
 	"scripts": {
-		"dev": "nodemon --require esm src/index.js"
+		"dev": "nodemon --require esm src/index.js",
+		"migrate": "node --require esm node_modules/.bin/sequelize-cli db:migrate"
 	},
 	"dependencies": {
 		"apollo-server-core": "^3.5.0",
@@ -19,6 +20,7 @@
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.15",
+		"sequelize-cli": "^6.3.0",
 		"sqlite3": "^5.0.2"
 	}
 }

@@ -7,5 +7,6 @@ export default gql`
 		today: Day
 		currentAnnouncements: [Announcement]
 		upcomingEvents: [Event]
+		schedules: [Schedule]
 	}
 `;

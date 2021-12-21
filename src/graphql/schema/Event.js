@@ -1,11 +1,9 @@
 import {gql} from "apollo-server-express";
 
 export default gql`
-	type Day {
+	type Event {
+		name: String!
 		date: Date!
-		schedule: Schedule!
-		testing: String!
-		block: String!
 		id: Int!
 	}
 `;

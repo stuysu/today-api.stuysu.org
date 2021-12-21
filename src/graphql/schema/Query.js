@@ -5,5 +5,7 @@ export default gql`
 		ping: String!
 
 		today: Day
+		currentAnnouncements: [Announcement]
+		upcomingEvents: [Event]
 	}
 `;

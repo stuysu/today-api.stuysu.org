@@ -10,8 +10,8 @@ module.exports = (sequelize, DataTypes) => {
 		 * The `models/index` file will call this method automatically.
 		 */
 		static associate(models) {
-			//day.belongsTo(models.schedule);
-			day.hasOne(models.schedule);
+			day.belongsTo(models.schedule);
+			//day.hasOne(models.schedule);
 		}
 	};
 	day.init({

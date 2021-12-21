@@ -1,9 +1,9 @@
 import {gql} from "apollo-server-express";
 
 export default gql`
-	type Schedule {
-		schedule: String!
-		name: String!
+	type Announcement {
+		announcement: String!
+		category: String!
 		id: Int!
 	}
 `;

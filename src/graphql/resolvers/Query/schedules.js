@@ -1,1 +1,1 @@
-export default (_, __, {models: {schedule}}) => schedule.findAll()
+export default (_, __, { models: { schedule } }) => schedule.findAll();

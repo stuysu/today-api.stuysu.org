@@ -1,1 +1,1 @@
-export default async () => "pong!";
+export default async () => 'pong!';

@@ -12,7 +12,7 @@ module.exports = {
 		url: SEQUELIZE_URL,
 		define: {
 			charset: 'utf8',
-			collate: 'utf8_unicode_ci'
+			collate: 'utf8mb4_unicode_ci'
 		},
 		ssl: true,
 		native: true,
@@ -29,7 +29,7 @@ module.exports = {
 		},
 		define: {
 			charset: 'utf8',
-			collate: 'utf8_unicode_ci'
+			collate: 'utf8mb4_unicode_ci'
 		},
 		native: true,
 		ssl: true,

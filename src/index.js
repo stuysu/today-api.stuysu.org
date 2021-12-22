@@ -8,7 +8,7 @@ const app = express();
 
 //TODO Change netlify url to whatever the project is called
 const allowedOrigins =
-	/^https?:\/\/(?:localhost|today\.stuysu\.org)|todaystuysu\.netlify\.(?:com|app)$/;
+	/^https?:\/\/(?:localhost|today(?:-api)?\.stuysu\.org)|todaystuysu\.netlify\.(?:com|app)$/;
 
 app.use(
 	cors({

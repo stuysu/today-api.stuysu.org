@@ -7,7 +7,8 @@
 		"start": "node --require esm src/index.js",
 		"dev": "nodemon --require esm src/index.js",
 		"migrate": "node --require esm node_modules/.bin/sequelize-cli db:migrate",
-		"seedSchedules": "node --require esm src/defaultSchedules.js"
+		"seedSchedules": "node --require esm src/defaultSchedules.js",
+		"build": "npm run migrate"
 	},
 	"dependencies": {
 		"apollo-server-core": "^3.5.0",

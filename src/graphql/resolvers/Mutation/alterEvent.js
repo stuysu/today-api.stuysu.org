@@ -7,6 +7,8 @@ export default async (
 	{ id, date, name },
 	{ models: { event }}
 ) => {
+	date = `${date.getUTCFullYear()}-${date.getUTCMonth() + 1}-${date.getUTCDate()}`
+
 	const editingEvent = await event.findOne({
 		where: {
 			id

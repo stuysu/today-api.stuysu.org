@@ -24,7 +24,7 @@ export default async (
 	}
 
 	if (date) editingDay.date = date;
-	if (scheduleId) editingDay.scheduleId = scheduleId;
+	if (scheduleId !== undefined) editingDay.scheduleId = scheduleId;
 	if (testing) editingDay.testing = testing;
 	if (block) editingDay.block = block;
 	await editingDay.save();

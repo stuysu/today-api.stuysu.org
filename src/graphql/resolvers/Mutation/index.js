@@ -4,6 +4,8 @@ import createEvent from './createEvent';
 import alterEvent from './alterEvent';
 import removeEvent from './removeEvent';
 import createAnnouncement from './createAnnouncement';
+import login from "./login"
+import logout from "./logout"
 
 export default {
 	echo,
@@ -11,5 +13,7 @@ export default {
 	createEvent,
 	alterEvent,
 	removeEvent,
-	createAnnouncement
+	createAnnouncement,
+	login,
+	logout
 };

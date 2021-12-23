@@ -22,7 +22,10 @@ const apolloServer = new ApolloServer({
 	typeDefs,
 	resolvers,
 	context: async ({ req, res }) => {
-		return { models };
+		return {
+			models,
+			session: req.session
+		};
 	},
 	uploads: false,
 	introspection: true,

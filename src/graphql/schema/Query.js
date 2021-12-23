@@ -9,5 +9,7 @@ export default gql`
 		upcomingEvents: [Event]
 		schedules: [Schedule]
 		upcomingDays: [Day]
+
+		authenticatedUser: User
 	}
 `;

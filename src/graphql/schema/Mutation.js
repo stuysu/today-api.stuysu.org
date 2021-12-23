@@ -17,5 +17,8 @@ export default gql`
 			announcement: String!
 			category: String!
 		): Announcement!
+
+		login(token: String!): User!
+		logout: Boolean!
 	}
 `;

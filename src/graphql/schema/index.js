@@ -5,6 +5,7 @@ import Schedule from './Schedule';
 import Day from './Day';
 import Event from './Event';
 import Announcement from './Announcement';
+import User from "./User"
 
 export default [
 	...graphqlScalarDefs,
@@ -13,5 +14,6 @@ export default [
 	Schedule,
 	Day,
 	Announcement,
-	Event
+	Event,
+	User
 ];

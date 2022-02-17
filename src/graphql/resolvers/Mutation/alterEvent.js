@@ -1,6 +1,7 @@
 import { ApolloError } from 'apollo-server-express';
 
-export default async (_, { id, date, name }, { models: { event } }) => {
+export default async (_, { id, date, name }, { models: { event }, permissionRequired }) => {
+	await permissionRequired("events")
 	date = `${date.getUTCFullYear()}-${
 		date.getUTCMonth() + 1
 	}-${date.getUTCDate()}`;

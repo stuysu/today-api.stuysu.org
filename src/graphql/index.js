@@ -24,7 +24,25 @@ const apolloServer = new ApolloServer({
 	context: async ({ req, res }) => {
 		return {
 			models,
-			session: req.session
+			session: req.session,
+			permissionRequired: async (permission, subcategory) => {
+				if (req.session.userId === undefined) throw new ForbiddenError("You must be logged in to make this operation!")
+				const user = await models.users.findOne({where: {id: req.session.userId}})
+				if (!user) throw new ForbiddenError("Logged in user not found!")
+				let permissionJSON;
+				try {
+					permissionJSON = JSON.parse(user.permissions)
+				} catch (e) {
+					throw new ForbiddenError(`You don't have the permissions necessary to make this operation or your permissions are messed up! Permissions: ${user.permissions}`)
+				}
+				if (permission === "announcements") {
+					if (!(permissionJSON[permission][subcategory]))
+						throw new ForbiddenError(`You don't have the permissions necessary to make this operation! Needed: ${permission}.${subcategory}`)
+				} else {
+					if (!(permissionJSON[permission]))
+					throw new ForbiddenError(`You don't have the permissions necessary to make this operation! Needed: ${permission}`)
+				}
+			}
 		};
 	},
 	uploads: false,

@@ -20,5 +20,8 @@ export default gql`
 
 		login(token: String!): User!
 		logout: Boolean!
+		createUser(email: String!, permissions: String!): User!
+		alterUser(id: Int!, permissions: String, email: String): User!
+		removeUser(id: Int!): Boolean!
 	}
 `;

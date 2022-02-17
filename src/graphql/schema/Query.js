@@ -11,5 +11,6 @@ export default gql`
 		upcomingDays: [Day]
 
 		authenticatedUser: User
+		users: [User]
 	}
 `;

@@ -1,8 +1,9 @@
 export default async (
 	_,
 	{ date, scheduleId, testing, block },
-	{ models: { day, schedule } }
+	{ models: { day, schedule }, permissionRequired }
 ) => {
+	await permissionRequired("days")
 	// date is a date object
 
 	// TODO validation

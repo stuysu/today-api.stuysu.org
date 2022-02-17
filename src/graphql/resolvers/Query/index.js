@@ -5,6 +5,7 @@ import upcomingEvents from './upcomingEvents';
 import schedules from './schedules';
 import upcomingDays from './upcomingDays';
 import authenticatedUser from "./authenticatedUser"
+import users from "./users"
 
 export default {
 	ping,
@@ -13,5 +14,6 @@ export default {
 	upcomingEvents,
 	schedules,
 	upcomingDays,
-	authenticatedUser
+	authenticatedUser,
+	users
 };

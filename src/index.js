@@ -45,7 +45,7 @@ const session = expressSession({
 	store: sequelizeStore,
 	cookie: {
 		path: "/",
-		httpOnly: NODE_ENV !== "production",
+		httpOnly: true,
 		maxAge: 7 * 86400 * 1000,
 		sameSite: "none",
 		secure: NODE_ENV === "production"
@@ -63,6 +63,7 @@ apolloServer
 // dev env for now
 // export default app;
 
+app.enable("trust proxy")
 app.listen(process.env.PORT || 3001, () =>
 	console.log(`Listening on port ${process.env.PORT || 3001}`)
 );

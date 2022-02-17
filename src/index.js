@@ -45,7 +45,7 @@ const session = expressSession({
 	store: sequelizeStore,
 	cookie: {
 		path: "/",
-		httpOnly: true,
+		httpOnly: NODE_ENV !== "production",
 		maxAge: 7 * 86400 * 1000,
 		sameSite: "none",
 		secure: NODE_ENV === "production"

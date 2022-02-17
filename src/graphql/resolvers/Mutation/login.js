@@ -38,6 +38,8 @@ export default async (
 
 	session.userId = user.id;
 	session.permissions = user.permissions;
+	await session.save();
+	console.log(session)
 
 	return user;
 }

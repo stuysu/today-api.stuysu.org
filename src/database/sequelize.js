@@ -28,7 +28,7 @@ module.exports = {
 			idle: 10000
 		},
 		define: {
-			charset: 'utf8',
+			charset: 'utf8mb4',
 			collate: 'utf8mb4_unicode_ci'
 		},
 		native: true,

@@ -9,6 +9,8 @@ import { NODE_ENV } from './constants';
 
 import apolloServer from './graphql';
 
+import todayJson from './todayJson';
+
 const app = express();
 
 const allowedOrigins =
@@ -59,6 +61,8 @@ apolloServer
 	.then(() =>
 		apolloServer.applyMiddleware({ app, path: '/graphql', cors: false })
 	);
+
+app.get("/today.json", todayJson)
 
 // dev env for now
 // export default app;

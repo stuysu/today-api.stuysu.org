@@ -7,7 +7,10 @@ export default async (_, { id, email, permissions}, {models: {users}, permission
 		throw new ApolloError("There's no user with that ID", "ID_NOT_FOUND")
 	}
 
-	if (email) user.email = email;
+	if (email && user.email !== email) {
+		user.email = email;
+		user.oAuthId = "";
+	}
 	if (permissions) {
 		try {
 			JSON.parse(permissions)

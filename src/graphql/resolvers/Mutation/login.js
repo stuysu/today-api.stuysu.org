@@ -27,7 +27,6 @@ export default async (
 	if (!user.oAuthId) {
 		user.firstName = firstName
 		user.lastName = lastName
-		user.permissions = ""
 		user.oAuthId = oAuthId;
 		await user.save()
 	}

@@ -9,6 +9,21 @@ export default async function todayJson(req, res) {
 		}
 	});
 
+	if (!dbDay) res.json({
+		date: new Date(),
+		testing: "None",
+		block: "N/A",
+		schedule: [],
+		scheduleName: "No Data for Today",
+		period: {
+			name: "No Data for Today",
+			start: "12:00 AM",
+			end: "11:59 PM",
+			into: 0,
+			left: 0
+		}
+	})
+
 	const dbSchedule = await schedule.findOne({ where: { id: dbDay.scheduleId }})
 
 	const today = {
